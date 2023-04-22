@@ -2,18 +2,18 @@ body {
     display: grid;
     grid-template-rows: 1fr 10rem auto;
     grid-template-areas: "main" "." "footer";
-    overflow-x: hidden;
+    overflow: hidden;
     background: #f5f7fa;
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
 body .footer {
     z-index: 1;
-    --footer-background: #ed5565;
+    --footer-background: #7700ff;
     display: grid;
     position: relative;
     grid-area: footer;
-    min-height: 12rem;
+    min-height: 10rem;
 }
 body .footer .bubbles {
     position: absolute;
@@ -40,36 +40,6 @@ body .footer .content {
     padding: 2rem;
     background: var(--footer-background);
 }
-body .footer .content a, body .footer .content p {
-    color: #f5f7fa;
-    text-decoration: none;
-}
-body .footer .content b {
-    color: white;
-}
-body .footer .content p {
-    margin: 0;
-    font-size: 0.75rem;
-}
-body .footer .content > div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-body .footer .content > div > div {
-    margin: 0rem 0;
-}
-body .footer .content > div > div > * {
-    margin-right: 0rem;
-}
-body .footer .content > div .image {
-    align-self: center;
-    width: 4rem;
-    height: 4rem;
-    margin: 0rem 0;
-    background-size: cover;
-    background-position: center;
-}
 @keyframes bubble-size {
     0%, 75% {
         width: var(--size, 8rem);
@@ -88,7 +58,6 @@ body .footer .content > div .image {
         bottom: var(--distance, 10rem);
    }
 }
-
 #caixa {
     z-index: 2;
     display: grid;
@@ -96,4 +65,5 @@ body .footer .content > div .image {
     grid-gap: 2rem;
     padding: 2rem;
     background: var(--footer-background);
+    margin: -19px;
 }
